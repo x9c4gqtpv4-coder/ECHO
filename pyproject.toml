@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "batch-color-standardizer"
+version = "0.5.3"
+description = "Region-aware color standardization for fashion images"
+readme = "README.md"
+license = "MIT"
+keywords = ["color-transfer", "color-standardization", "fashion", "macos", "image-processing"]
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "numpy>=2.0,<3",
+  "Pillow>=11,<13",
+]
+
+[project.optional-dependencies]
+semantic = [
+  "mediapipe==1.0.1",
+]
+fine-semantic = [
+  "torch>=2.5,<3",
+  "transformers>=4.48,<5",
+  "safetensors>=0.5,<1",
+]
+
+[project.scripts]
+batch-color = "batch_color.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/x9c4gqtpv4-coder/batch-color-standardizer"
+Repository = "https://github.com/x9c4gqtpv4-coder/batch-color-standardizer"
+Issues = "https://github.com/x9c4gqtpv4-coder/batch-color-standardizer/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]

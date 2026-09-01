@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "experimental_starting_point_requires_sentinel_calibration",
+  "thresholds": {
+    "background": 0.82,
+    "hair": 0.88,
+    "upper_clothes": 0.9,
+    "skirt": 0.9,
+    "pants": 0.9,
+    "dress": 0.9,
+    "left_shoe": 0.9,
+    "right_shoe": 0.9,
+    "face": 0.92,
+    "left_leg": 0.92,
+    "right_leg": 0.92,
+    "left_arm": 0.92,
+    "right_arm": 0.92,
+    "hat": 0.9,
+    "sunglasses": 0.94,
+    "belt": 0.92,
+    "bag": 0.92,
+    "scarf": 0.9,
+    "garment": 0.9,
+    "shoes": 0.9,
+    "skin": 0.92,
+    "accessories": 0.92
+  }
+}

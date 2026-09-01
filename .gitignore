@@ -1,0 +1,44 @@
+.DS_Store
+.venv/
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 原图、参考图、缓存和输出只保留在本机。
+data/input/*
+data/references/*
+data/output/*
+data/cache/*
+!data/input/.gitkeep
+!data/references/.gitkeep
+!data/output/.gitkeep
+!data/cache/.gitkeep
+
+# 模型权重体积大，且许可证可能和源码不同，不提交到 GitHub。
+models/*
+!models/README.md
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.mlmodelc/
+
+# 本机生成的报告、预览和空间蒙版。
+reports/
+previews/
+artifacts/
+*.bcp
+
+# macOS Vision 原生辅助工具的本机构建产物。
+tools/person_mask/bin/
+tools/face_mask/bin/
+tools/pose_evidence/bin/
+
+# 本机导出的源码包与纯文本合集，不重复提交生成物。
+deliverables/

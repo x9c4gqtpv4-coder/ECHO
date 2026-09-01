@@ -1,0 +1,7 @@
+# 本机已验证的运行依赖，不含系统Vision或Xcode命令行工具。
+# Python 3.12.13 / Apple Silicon。主算法仍为实验基线。
+numpy==2.3.5
+Pillow==12.3.0
+mediapipe==1.0.1
+opencv-contrib-python==4.14.0.94
+flatbuffers==25.12.19
