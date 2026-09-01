@@ -1,18 +1,34 @@
-# Batch Color Standardizer｜批量校色
+<div align="center">
 
-一个按照参考图统一整套图片色彩的本地批量校色工具，主要用于时尚电商、模特图和同一 SKU 的多张成品图。
+# Batch Color Standardizer
 
-## 这个项目有什么作用
+### 一张参考图，统一一整套 SKU 的背景、人物与服装色彩
 
-给系统一张标准参考图和一组需要校色的图片，它可以：
+把冷暖、明暗、肤色和背景不一致的成品图，收敛到同一套视觉标准。
 
-- 统一背景的冷暖、亮度和色偏。
-- 统一人物、肤色、头发和服装的整体色彩氛围。
-- 减少同一套图片之间忽冷忽暖、忽明忽暗的问题。
-- 保护书本、商标、配饰或指定商品，避免不应该变化的区域被改色。
-- 批量输出校色图、蒙版、对照预览和检查报告。
+Local-first, region-aware color standardization for fashion SKU image sets.
 
-项目的核心目标是：**让同一套图片看起来像在相同的色彩标准下完成。**
+![macOS Local](https://img.shields.io/badge/macOS-Local-000000?logo=apple&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-166%20passed-2EA44F)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+[解决的问题](#它解决什么问题) · [工作原理](#核心原理) · [主要能力](#默认能力) · [能力边界](#能力边界)
+
+</div>
+
+![SOURCE、待复核校色候选与参考标准的三联对照](assets/readme-color-match-demo.jpg)
+
+<p align="center"><sub>原创合成图演示：左侧为人为制造色偏的输入，中间为本项目生成的待复核候选，右侧为参考标准。背景差异指标由 3.219 降至 1.792；该示例用于说明工作流程，不代表物理绝对商品色。</sub></p>
+
+## 它解决什么问题
+
+同一 SKU 的 5～7 张成品图，经常因为动作、背景和生成条件不同，出现冷暖、曝光、肤色和服装观感不一致。本项目让每个 SKU 使用自己的参考图作为标准，批量缩小这些差异。
+
+- **套系一致**：背景、人物和服装向同一视觉标准靠拢。
+- **过渡自然**：人物整体使用平滑变换，减少脸、脖子、头发和服装之间的色块与分层。
+- **对象保护**：书本、商标、配饰和指定商品可以保持原色。
+- **本地处理**：Mac 本地运行，不上传业务图片，不依赖 NVIDIA 显卡或云端服务器。
 
 ## 核心原理
 
