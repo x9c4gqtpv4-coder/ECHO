@@ -40,3 +40,7 @@ Issues = "https://github.com/x9c4gqtpv4-coder/ECHO/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.comfy]
+PublisherId = "sysyou"
+DisplayName = "ECHO · 回响"
