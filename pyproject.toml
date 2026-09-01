@@ -29,9 +29,9 @@ fine-semantic = [
 batch-color = "batch_color.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/x9c4gqtpv4-coder/batch-color-standardizer"
-Repository = "https://github.com/x9c4gqtpv4-coder/batch-color-standardizer"
-Issues = "https://github.com/x9c4gqtpv4-coder/batch-color-standardizer/issues"
+Homepage = "https://github.com/x9c4gqtpv4-coder/ECHO"
+Repository = "https://github.com/x9c4gqtpv4-coder/ECHO"
+Issues = "https://github.com/x9c4gqtpv4-coder/ECHO/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
