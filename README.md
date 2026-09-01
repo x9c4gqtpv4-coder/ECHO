@@ -17,9 +17,9 @@ Local-first, region-aware color standardization for fashion SKU image sets.
 
 </div>
 
-![SOURCE、待复核校色候选与参考标准的三联对照](assets/readme-color-match-demo.jpg)
+![原图、最终校色结果与参考图的三联对照](assets/readme-color-match-demo.jpg)
 
-<p align="center"><sub>原创合成图演示：左侧为人为制造色偏的输入，中间为本项目生成的待复核候选，右侧为参考标准。背景差异指标由 3.219 降至 1.792；该示例用于说明工作流程，不代表物理绝对商品色。</sub></p>
+<p align="center"><sub>真实测试效果：左侧为原图，中间为校色结果，右侧为参考图。系统分别匹配背景光场以及人物、服装与肤色的曝光和冷暖，同时保护原有服装颜色、材质纹理与真实肤色。</sub></p>
 
 ## 它解决什么问题
 
