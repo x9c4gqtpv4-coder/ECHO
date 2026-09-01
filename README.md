@@ -4,11 +4,7 @@
 
 ### Every image, an echo of one reference.
 
-**让每一张图片，都成为参考标准的视觉回响。**
-
-以一张参考图统一整套 SKU 的背景、人物、服装色彩与光感。
-
-Local-first, reference-guided color consistency for fashion SKU image sets.
+**一个本地运行的参考图精准校色工具，用一张标准图解决同一 SKU 多张图片在背景、人物、服装与光感上难以成套统一的问题。**
 
 ![macOS Local](https://img.shields.io/badge/macOS-Local-000000?logo=apple&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white)
