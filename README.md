@@ -7,11 +7,12 @@
 **一个本地运行的参考图精准校色工具，用一张标准图解决同一 SKU 多张图片在背景、人物、服装与光感上难以成套统一的问题。**
 
 ![macOS Local](https://img.shields.io/badge/macOS-Local-000000?logo=apple&logoColor=white)
+![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom_Node-24A1C1)
 ![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-166%20passed-2EA44F)
+![Tests](https://img.shields.io/badge/tests-177%20passed-2EA44F)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-[解决的问题](#它解决什么问题) · [工作原理](#核心原理) · [主要能力](#默认能力) · [能力边界](#能力边界)
+[解决的问题](#它解决什么问题) · [ComfyUI 工作流](#comfyui-工作流) · [工作原理](#核心原理) · [能力边界](#能力边界)
 
 </div>
 
@@ -27,6 +28,32 @@
 - **过渡自然**：人物整体使用平滑变换，减少脸、脖子、头发和服装之间的色块与分层。
 - **对象保护**：书本、商标、配饰和指定商品可以保持原色。
 - **本地处理**：Mac 本地运行，不上传业务图片，不依赖 NVIDIA 显卡或云端服务器。
+
+## ComfyUI 工作流
+
+ECHO 现在可以直接放进 ComfyUI：
+
+```text
+Load Image（原图）─┐
+                    ├─→ ECHO Reference Match ─→ Save Image
+Load Image（参考图）─┘
+```
+
+在 `ComfyUI/custom_nodes` 目录中安装：
+
+```bash
+git clone https://github.com/x9c4gqtpv4-coder/ECHO.git
+```
+
+然后使用 **ComfyUI 自己的 Python 环境**安装 `ECHO/requirements.txt`，重启 ComfyUI，搜索 `ECHO Reference Match / 回响·参考追色`。
+
+- `source`：需要校色的图片。
+- `reference`：色彩、冷暖和曝光标准。
+- `protect_mask`：可选；白色区域完全保持原图像素。
+- `source_background_mask` / `reference_background_mask`：可选；连接经过人工确认的蒙版可提高复杂场景稳定性。
+
+可直接载入 [示例工作流](examples/ECHO_reference_match_workflow.json)，完整说明见 [ComfyUI 使用指南](docs/COMFYUI.md)。
+需要云端运行时，可使用 [RunningHub 四条并行接入路径](docs/RUNNINGHUB.md)。
 
 ## 核心原理
 
@@ -100,15 +127,15 @@
 
 ## 运行环境与隐私
 
-- 基础模式使用 Python、NumPy、Pillow 和 macOS Vision。
+- 跨平台基础模式使用 Python、NumPy 和 Pillow；macOS Vision 是可选增强。
 - 不需要 NVIDIA 显卡，也不需要云端服务器。
 - 默认在 Mac 本地处理，不会把图片上传到云端。
 - 公开仓库不包含用户照片、SKU 数据、个人路径、账号凭据或模型权重。
 
 ## 当前状态
 
-- 当前版本：`0.5.3`
-- 完整回归：166 项通过，0 失败，0 跳过
+- 当前版本：`0.6.0`
+- 完整回归：177 项通过，0 失败，0 跳过
 - 开源许可：[MIT License](LICENSE)
 
 更详细的技术内容：

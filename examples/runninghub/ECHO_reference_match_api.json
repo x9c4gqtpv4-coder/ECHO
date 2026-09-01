@@ -1,0 +1,29 @@
+{
+  "1": {
+    "inputs": {"image": "source.png"},
+    "class_type": "LoadImage",
+    "_meta": {"title": "Source / 原图"}
+  },
+  "2": {
+    "inputs": {"image": "reference.png"},
+    "class_type": "LoadImage",
+    "_meta": {"title": "Reference / 参考图"}
+  },
+  "3": {
+    "inputs": {
+      "strength": 0.85,
+      "adjustment_mode": "background + person",
+      "transform_path": "auto",
+      "mask_backend": "heuristic",
+      "source": ["1", 0],
+      "reference": ["2", 0]
+    },
+    "class_type": "ECHOReferenceMatch",
+    "_meta": {"title": "ECHO Reference Match / 回响·参考追色"}
+  },
+  "4": {
+    "inputs": {"filename_prefix": "ECHO", "images": ["3", 0]},
+    "class_type": "SaveImage",
+    "_meta": {"title": "ECHO Output / 校色结果"}
+  }
+}

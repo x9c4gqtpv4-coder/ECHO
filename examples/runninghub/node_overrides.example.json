@@ -1,0 +1,8 @@
+[
+  {"nodeId": "1", "fieldName": "image", "fieldValue": "api/source.png", "description": "source image"},
+  {"nodeId": "2", "fieldName": "image", "fieldValue": "api/reference.png", "description": "reference image"},
+  {"nodeId": "3", "fieldName": "strength", "fieldValue": 0.85},
+  {"nodeId": "3", "fieldName": "adjustment_mode", "fieldValue": "background + person"},
+  {"nodeId": "3", "fieldName": "transform_path", "fieldValue": "auto"},
+  {"nodeId": "3", "fieldName": "mask_backend", "fieldValue": "heuristic"}
+]

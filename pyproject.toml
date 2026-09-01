@@ -4,15 +4,20 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "batch-color-standardizer"
-version = "0.5.3"
+version = "0.6.0"
 description = "ECHO: reference-guided color consistency for fashion SKU image sets"
 readme = "README.md"
 license = "MIT"
-keywords = ["color-transfer", "color-standardization", "fashion", "macos", "image-processing"]
+keywords = ["color-transfer", "color-standardization", "fashion", "comfyui", "image-processing"]
 requires-python = ">=3.11,<3.13"
 dependencies = [
   "numpy>=2.0,<3",
   "Pillow>=11,<13",
+]
+classifiers = [
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
 ]
 
 [project.optional-dependencies]
