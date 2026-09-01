@@ -1,12 +1,14 @@
 <div align="center">
 
-# Batch Color Standardizer
+# ECHO · 回响
 
-### 一张参考图，统一一整套 SKU 的背景、人物与服装色彩
+### Every image, an echo of one reference.
 
-把冷暖、明暗、肤色和背景不一致的成品图，收敛到同一套视觉标准。
+**让每一张图片，都成为参考标准的视觉回响。**
 
-Local-first, region-aware color standardization for fashion SKU image sets.
+以一张参考图统一整套 SKU 的背景、人物、服装色彩与光感。
+
+Local-first, reference-guided color consistency for fashion SKU image sets.
 
 ![macOS Local](https://img.shields.io/badge/macOS-Local-000000?logo=apple&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white)

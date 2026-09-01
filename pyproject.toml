@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "batch-color-standardizer"
 version = "0.5.3"
-description = "Region-aware color standardization for fashion images"
+description = "ECHO: reference-guided color consistency for fashion SKU image sets"
 readme = "README.md"
 license = "MIT"
 keywords = ["color-transfer", "color-standardization", "fashion", "macos", "image-processing"]
